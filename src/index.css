@@ -1,0 +1,84 @@
+html {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Quicksand', sans-serif;
+	height: 100%;
+	width: 100%;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+#root {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* Remove autofill background color for input components */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	transition-delay: 9999s;
+	-webkit-transition-delay: 9999s;
+	transition: color 9999s ease-out, background-color 9999s ease-out;
+	-webkit-transition: color 9999s ease-out, background-color 9999s ease-out;
+}
+
+.flatButton {
+	border: none;
+	height: 35px;
+	width: 200px;
+	outline: none;
+	background: transparent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	font-family: 'Quicksand', sans-serif;
+}
+
+.flatButton:hover {
+	border-radius: 25px;
+	background: rgba(0, 0, 0, 0.3);
+}
+
+.grid {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.column {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	margin: 10px;
+	flex-direction: column;
+	flex: 1;
+}
+
+.column:last-child {
+	margin-right: 0px;
+}
+
+@media screen and (max-width: 1000px) {
+	.column {
+		flex: unset;
+		max-width: 100% !important;
+	}
+}
